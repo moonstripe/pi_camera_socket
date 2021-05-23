@@ -7,9 +7,10 @@ from PIL import Image
 # all interfaces)
 
 server_socket = socket.socket()
-server_socket.bind(('127.0.0.1', 8000))
+host = socket.gethostname()
+server_socket.bind((host, 8000))
 server_socket.listen(0)
-print('socket up: 127.0.0.1')
+print('socket up: ', host)
 
 # Accept a single connection and make a file-like object out of it
 connection = server_socket.accept()[0].makefile('rb')
