@@ -31,6 +31,7 @@ try:
         image_stream.seek(0)
         image = Image.open(image_stream)
         print('Image is %dx%d' % image.size)
+        image.save('test.jpg')
         image.verify()
         print('Image is verified')
 finally:
