@@ -35,5 +35,6 @@ try:
         image.verify()
         print('Image is verified')
 finally:
+    print('socket closed')
     connection.close()
     server_socket.close()
