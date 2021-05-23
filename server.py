@@ -5,12 +5,15 @@ from PIL import Image
 
 # Start a socket listening for connections on 0.0.0.0:8000 (0.0.0.0 means
 # all interfaces)
+
 server_socket = socket.socket()
-server_socket.bind(('0.0.0.0', 8000))
+server_socket.bind(('127.0.0.1', 8000))
 server_socket.listen(0)
+print('socket up: 127.0.0.1')
 
 # Accept a single connection and make a file-like object out of it
 connection = server_socket.accept()[0].makefile('rb')
+print('connection found: ', connection)
 try:
     while True:
         # Read the length of the image as a 32-bit unsigned int. If the
