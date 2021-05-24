@@ -8,6 +8,7 @@ from PIL import Image
 
 server_socket = socket.socket()
 host = socket.gethostname()
+host = '192.168.4.43'
 server_socket.bind((host, 8000))
 server_socket.listen(0)
 print('socket up: ', host)
