@@ -4,11 +4,11 @@ import struct
 from PIL import Image
 
 # Start a socket listening for connections on 0.0.0.0:8000 (0.0.0.0 means
-# all interfaces)
+# all interfaces) (192.168.4.43)
 
 server_socket = socket.socket()
 host = socket.gethostname()
-host = '192.168.4.43'
+host = '192.168.10.172'
 server_socket.bind((host, 8000))
 server_socket.listen(0)
 print('socket up: ', host)

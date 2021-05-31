@@ -4,10 +4,9 @@ import struct
 import time
 import picamera
 
-# Connect a client socket to my_server:8000 (change my_server to the
-# hostname of your server)
+# Connect a client socket to my_server:8000 (192.168.4.43)
 client_socket = socket.socket()
-client_socket.connect(('192.168.4.43', 8000))
+client_socket.connect(('192.168.10.172', 8000))
 
 # Make a file-like object out of the connection
 connection = client_socket.makefile('wb')
